@@ -1,3 +1,8 @@
+import { loadHeaderFooter } from "./utils.mjs"
+
+loadHeaderFooter();
+
+
 document.getElementById('checkBMI').addEventListener('click', () => {
   const heightVal = parseFloat(document.getElementById('height').value);
   const weightVal = parseFloat(document.getElementById('weight').value);
