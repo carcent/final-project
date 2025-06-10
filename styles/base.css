@@ -1,5 +1,20 @@
+:root{
+    --color-primary:#06D6A0;
+    --color-second:#85091c;
+    --color-tert: #F694C1;  
+    --text-color: #121619;
+    --text-color-light:#F1EEAC; 
+
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
-    background-color: #662424;
+    background-color:var(--color-primary);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto 1fr;
@@ -34,8 +49,8 @@ header {
     padding: 20px;
     margin: 15px;
     margin-left: 40px;
-    background-color: #D84907;
-    color: #070202;
+    background-color: var(--color-second);
+    color: var(--text-color);
     font-size: 1.2rem;
     text-align: center;
     text-decoration: none;
@@ -51,7 +66,7 @@ header {
 }
 
 nav {
-    background-color: #782507;
+    background-color: var(--color-second);
 
 }
 
@@ -104,7 +119,7 @@ ul.menuLinks.open {
 
 ul.menuLinks a {
 
-    color: #FFFFFF;
+    color: var(--text-color-light);
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -114,14 +129,14 @@ ul.menuLinks a {
 
 h1 {
     font-family: Quando;
-    color: #f5f5dc;
+    color: var(--text-color-light);
 }
 
 h2,
 h3,
 p {
     font-family: inter;
-    color: #f5f5dc;
+    color: var(--text-color-light);
 
 }
 
@@ -156,15 +171,15 @@ figcaption {
 }
 
 footer {
-    background-color: #682904;
+    background-color: var(--color-second);
     text-align: center;
     padding: 20px;
-    color: #F7F3F3;
+    color: var(--text-color-light);
     position: absolute bottom 0;
 }
 
 footer p {
-    color: #F7F3F3
+    color: var(--text-color-light)
 }
 
 div {
