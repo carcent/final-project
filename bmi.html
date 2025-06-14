@@ -36,20 +36,26 @@
     <main>
         <h2>BMI Calculator</h2>
         
-            <label for="weight">Weight (kg):</label>
+            <label for="weight">Weight (kg):*</label>
             <input type="number" id="weight" required>
 
-            <label for="height">Height (cm):</label>
+            <label for="height">Height (cm):*</label>
             <input type="number" id="height" required>
 
-            <label for="age">Age:</label>
+            <label for="age">Age:*</label>
             <input type="number" id="age" required>
 
-            <label for="sex">Sex:</label>
+            <label for="sex">Sex:*</label>
             <select id="sex" required>
             <option value="male">Male</option>
             <option value="female">Female</option>
             </select>
+            <label for="waist">Waist (optional):</label>
+            <input type="number" id="waist">
+            <label for="hip">Hip (optional):</label>
+            <input type="number" id="hip">
+
+
         <button id="checkBMI">Check your BMI</button>
 
         <pre id="output">loading...</pre>
@@ -57,5 +63,7 @@
     </main>
     <footer id="footer"></footer>
 </body>
-  <script src="./scripts/main.js" type="module"></script>
+  <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/hamburgerButton.js"></script>   
+  <script src="scripts/bmi.js"></script> 
 </html>
