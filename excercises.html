@@ -28,34 +28,53 @@
     <nav>
         <button id="myButton"></button>
         <ul class="menuLinks">
-            <li class="active"><a href="index.html" title="home">Home</a></li>
+            <li><a href="index.html" title="home">Home</a></li>
             <li><a href="nutrition.html">Nutrition Check</a></li>
-            <li><a href="excercises.html">Excercises</a></li>
+            <li class="active"><a href="excercises.html">Excercises</a></li>
         </ul>
     </nav>
     <main>
-<section class="hero-container">
-     <img src="images/hero.webp" alt="Healthy lifestyle" class="hero-image">
+        <br><h2>Your perfect Excercises</h2><br>
+
+<form id="exerciseForm">
+    <label for="muscle">Muscle:</label>
+    <select id="muscle">
+        <option value="">All</option>
+        <option value="biceps">Biceps</option>
+        <option value="chest">Chest</option>
+        <option value="calves">Calves</option>
+        <option value="forearms">Forearms</option>
+        <option value="glutes">Glutes</option>
+        <option value="trap">Trap</option>
+        <option value="neck">Neck</option>
+        <option value="lats">Lats</option>
+    </select>
+
+    <label for="type">Type:</label>
+        <select id="type">
+        <option value="">All</option>
+        <option value="cardio">Cardio</option>
+        <option value="strength">Strength</option>
     
- 
-    <div class="quote-section">
-        <a href="nutrition.html"><h2>Evaluating Your Eating and Lifestyle Habits</h2> </a>
-        <blockquote id="quote">"Take care of your body. It's the only place you have to live." – Jim Rohn</blockquote> <br>
-        <p>Track your meals in a food journal. When starting a new diet or eating pattern, it can be helpful to journal your current eating and lifestyle habits so you're aware of what changes you need to make.[1] Note what foods and beverages you consume, plus the timing of your meals.</p>
-    </div>
-</section>
+    </select>
 
-<div class="hero-excercises">
-    <a href="excercises.html"><h2>Exercise is essential for good health.</h2></a> 
-    <p>Regular physical activity helps strengthen your muscles, improve heart health, and boost your mood. It increases energy levels, supports weight management, and reduces the risk of chronic diseases like diabetes and hypertension. Even simple activities like walking or stretching daily can make a big difference in your overall well-being. Staying active keeps your body and mind healthy!</p>
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+    <option value="">All</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="expert">Expert</option>
+    </select>
 
-    </div>
+    <button type="submit" class="submit">Search</button>
+</form>   
+        <div id="exerciseResults"></div>
 
-
+    
     </main>
     <footer id="footer"></footer>
 </body>
     <script src="scripts/main.js" type="module"></script>
     <script src="scripts/hamburgerButton.js"></script>   
-  
+    <script src="scripts/excercises.js"></script>
 </html>

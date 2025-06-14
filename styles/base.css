@@ -1,7 +1,7 @@
 :root{
     --color-primary:#06D6A0;
     --color-second:#85091c;
-    --color-tert: #F694C1;  
+    --color-tert: #f3b7d3;  
     --text-color: #121619;
     --text-color-light:#F1EEAC; 
 
@@ -27,44 +27,61 @@ header {
 }
 
 .hero-container {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 60vh;
+    overflow:hidden;
 }
 
 .hero-image {
-
-
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
 
-.cta-button {
-    position: relative;
-    padding: 20px;
-    margin: 15px;
-    margin-left: 40px;
-    background-color: var(--color-second);
-    color: var(--text-color);
-    font-size: 1.2rem;
+.quote-section {
+    background-color: #044919;
+    color: #FFFFFF;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
     text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-
-
-
+    font-style: italic;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+.quote-section h2 {
+    margin-bottom: 1rem;
+    color: var(--color-tert);
 }
 
-.cta-button:hover {
-    background-color: rgba(255, 255, 255, 0.1)
+.quote-section h3, .quote-section p {
+    color: #FFFFFF;
 }
 
+.quote-section a:hover {
+    color:var(--color-tert);
+    cursor:pointer;
+    text-decoration: dashed;
+}
+
+.hero-excercises {
+    width: 100%;
+    box-sizing: border-box; 
+    margin-top: 20px;
+    background-color: var(--color-tert);
+}
+.hero-excercises h2, .hero-excercises p {
+    color: var(--text-color);
+}
 nav {
     background-color: var(--color-second);
 
@@ -133,10 +150,10 @@ h1 {
 }
 
 h2,
-h3,
+h3, h4, 
 p {
     font-family: inter;
-    color: var(--text-color-light);
+    color: var(--text-color);
 
 }
 
@@ -144,7 +161,7 @@ h2 {
     text-align: center;
 }
 
-h3 {
+h3, h4 {
     text-align: center;
 }
 
@@ -159,23 +176,14 @@ h3 {
 }
 
 
-
-figcaption {
-    font-size: 1.5rem;
-    color: #F2F2F2;
-}
-
-#promoList {
-    display: none;
-    margin-top: 10px;
-}
-
 footer {
     background-color: var(--color-second);
     text-align: center;
     padding: 20px;
     color: var(--text-color-light);
-    position: absolute bottom 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
 }
 
 footer p {
@@ -186,37 +194,19 @@ div {
     gap: 50px;
 }
 
-.side-bar {
-    display: grid;
-    justify-content: center;
-}
-
-#sidebar {
-    background-color: #f4f4f9;
-    border: 5px solid #ffeb3b;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    height: 100px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: black;
-    margin: 20px;
-    transition: all 0.3s ease;
-    gap: 15px;
-    text-align: center;
-    justify-content: center;
-}
-
-#sidebar:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05);
-
-}
-
 /**---------FORM-*------**/
 
+#nutritionForm, #excerciseForm {
+    display: block;
+    position: center;
+    border:#0a0a0a;
+    background-color: #4faf95;
+    margin: auto;
+    padding: 10px;  
+    width: 100%;
+    border-radius: 10px;
+    font-size: 25px;
+}
 
 
 legend {
@@ -253,30 +243,12 @@ input[type="text"]
 
 }
 
-input[type="radio"] {
-    margin-right: 10px;
-    margin-top: 5px;
-}
-
-#bdesc {
-    width: 70%;
-    height: 80px;
-    padding: 14px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-}
-
 input:invalid {
     border-color: red;
     background-color: rgb(255, 246, 246);
 }
 
-input[type="text"]:focus,
-input[type="textarea"]:focus,
-#bdesc:focus {
+input[type="text"]:focus {
     border-color: #004aad;
     background-color: #dbe4f0;
     outline: none;
@@ -290,12 +262,12 @@ input[type="textarea"]:focus,
 
 
 
-input[type="submit"] {
-    background-image: linear-gradient(#a5485f, #a82a4a);
-    color: white;
+.submit, #foodButton {
+    background-image: linear-gradient(#880425, #69031d);
+    color: #FFFFFF;
     border: none;
     padding: 12px;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -304,12 +276,115 @@ input[type="submit"] {
     display: block;
 }
 
-input[type="submit"]:hover {
+.submit:hover,#foodButton:hover  {
     background-color: #a7163a;
-    transform: scale(1.05);
+    transform: scale(1.25);
 }
 
 
 .hidden {
     display: none;
+}
+
+.card-container, .excercise-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.nutrition-card, .exercise-card {
+    background-color: paleturquoise;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease background-color 0.3s ease;
+    cursor: pointer;
+    opacity:0;
+    animation:fadeInUp 0.5s forwards;
+}
+
+.nutrition-card:hover, .exercise-card:hover {
+    background-color: #e6f2ff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.nutrition-card h3, .exercise-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--color-second);
+    text-transform: capitalize;
+}
+
+.nutrition-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nutrition-card li, .exercise-card p{
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+#exerciseForm label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+#exerciseForm select {
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 130px;
+}
+.exercise-card {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.exercise-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: white;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    overflow-y: auto;
+    max-height: 500px; 
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

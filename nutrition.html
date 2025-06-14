@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Healthy</title>
+    <meta name="description" content="Keep your body healthy, lose weight ">
+    <meta name="author" content="Carla Centurion">
+
+
+    <meta property="og:title" content="Stay Healthy">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wdd330stayhealthy.netlify.app/">
+    <meta property="og:image" content="https://github.com/carcent/wdd330/final-project/public/images/stay-healthy.jpg   ">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header id="header"></header>
+    <nav>
+        <button id="myButton"></button>
+        <ul class="menuLinks">
+            <li ><a href="index.html" title="home">Home</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+            <li><a href="excercises.html">Excercises</a></li>
+            <li class="active"><a href="nutrition.html"></a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Your food input</h2><br>
+        
+        <h4>Fuel your body with the right nutrients! Discover the essential vitamins, minerals, and food groups that support a healthy lifestyle.<br> Eating well is the first step to feeling your best every day</h4>
+        <br><br>
+        <h3>Check the nutritional information of the food you eat clicking on search</h3><br>
+        <form id="nutritionForm">
+        <input type="text" id="foodInput" placeholder="e.g. banana">
+        <button type ="submit" id="foodButton">Search</button>
+    
+        </form>
+        <div id ="result" class="card-container"></div>
+    </main>
+    <footer id="footer"></footer>
+</body>
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/hamburgerButton.js"></script>    
+    <script src="scripts/nutrition.js"></script>
+</html>
