@@ -52,7 +52,6 @@ header {
     color: #FFFFFF;
     padding: 2rem;
     margin: 2rem auto;
-    border-radius: 10px;
     text-align: center;
     font-style: italic;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -82,6 +81,44 @@ header {
 .hero-excercises h2, .hero-excercises p {
     color: var(--text-color);
 }
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-section, .hero-excercises {
+    animation: fadeInSection 1s ease-out both;
+
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quote-section a, .hero-excercises a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.quote-section a:hover, .hero-excercises a:hover {
+    color: var(--color-tert);
+    text-decoration: underline dashed;
+}
+
+.quote-section {
+    animation-delay: 0.3s;
+}
+.hero-excercises {
+    animation-delay: 0.7s;
+}
+
+
 nav {
     background-color: var(--color-second);
 
